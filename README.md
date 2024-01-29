@@ -22,8 +22,8 @@ This is team A, submission for the Professional Software Project. This assignmen
 
 # 1.4. Built With
 
--Php
--Exel
+- Php
+- Exel
 - Java
 
 ## 2. Getting Setup
@@ -34,10 +34,7 @@ In this section, you should explain how to get your project setup to run locally
 
 List all contents of your submission here, such as:
 
-- Books.csv
-- Collection.java
-- HashMap.java
-- Report.docx
+- Group Protfolio.docx
 
 ## 2.2. Prerequisites
 
