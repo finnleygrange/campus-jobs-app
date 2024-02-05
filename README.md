@@ -14,17 +14,17 @@ The system should identify the hours that each student is working and approve th
  Finnley Grange, 
  Daiana A. Patachia-Popa,
  Purandare Udayan, 
- Perkins Phoebe
+ Perkins Phoebe, 
+ Harvey Spencer.
 
 ## 1.3. Release Notes
 
-This is team A, submission for the Professional Software Project. This assignment tasked us to create ... so that...
+This is team A, submission for the Professional Software Project. This assignment tasked us to create an app that turns spreadsheet into a database. and also allows to edit it and turns it back in spreadsheet if is needed.
 
 ## 1.4. Built With
 
-- Php
+- Php laravel
 - Exel
-- Java
 
 # 2. Getting Setup
 
