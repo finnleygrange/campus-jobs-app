@@ -75,16 +75,14 @@ This is team A, submission for the Professional Software Project. This assignmen
 
 List all contents of your submission here, such as:
 
-- Group Protfolio.docx
+- [Group Protfolio.docx](https://docs.google.com/document/d/1Nz0KwyaiV9yM6S8ljUufZkzB8p1QMxUPAqRPG6Z-RV8/edit?usp=sharing)
 
 ## 2.2. Prerequisites
 
-In this section, outline any prerequisites for running the software, such as:
-
-- Java 8+
-- IntelliJ IDEA
-- JDK 8+
-- Spring Boot 2.4.5
+- PHP
+- Composer
+- WSL
+- Docker
 
 ## 2.3. Installation
 
