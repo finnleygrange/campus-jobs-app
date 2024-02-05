@@ -26,9 +26,50 @@ This is team A, submission for the Professional Software Project. This assignmen
 - PHP Laravel
 - Excel
 
-# 2. Getting Setup
+## 2. Getting Setup
 
-In this section, you should explain how to get your project setup to run locally, to ensure the marking process runs smoothly. This should include any **prerequisites** and **Installation** details.
+1. **Install Docker**: 
+   - Download Docker Desktop from [here](https://www.docker.com/products/docker-desktop/).
+
+2. **Install WSL (Windows Subsystem for Linux)**:
+   - Open Command Prompt as administrator and execute the following command:
+     ```
+     wsl --install
+     ```
+
+3. **Install PHP**:
+   - Download the PHP zip file from [here](https://windows.php.net/download#php-8.3) and extract it to `C:/`.
+
+4. **Install Composer**:
+   - Download `composer-setup.exe` from [here](https://getcomposer.org/download/).
+
+5. **Clone Project Repositories**:
+   - Clone the project repositories from [GitHub - campus-jobs-team-a](https://github.com/finnleygrange/campus-jobs-team-a).
+
+6. **Open Project in VSCode**:
+   - Open VSCode and navigate to the `campus-jobs-app` directory.
+   - Open a new terminal within VSCode.
+
+7. **Install Dependencies**:
+   - Run the following command in the terminal:
+     ```
+     composer install
+     ```
+
+8. **Start WSL**:
+   - Run the following command in the terminal:
+     ```
+     wsl
+     ```
+
+9. **Run Project in Docker**:
+   - Execute the following command in the terminal:
+     ```
+     ./vendor/bin/sail up
+     ```
+   
+10. **View Project**:
+   - Open your browser and go to `localhost` to view the project.
 
 ## 2.1. Contents of Submission
 
