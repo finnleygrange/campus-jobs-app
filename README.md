@@ -75,7 +75,7 @@ This is team A, submission for the Professional Software Project. This assignmen
 
 List all contents of your submission here, such as:
 
-- [Group Protfolio.docx](https://docs.google.com/document/d/1Nz0KwyaiV9yM6S8ljUufZkzB8p1QMxUPAqRPG6Z-RV8/edit?usp=sharing)
+- Group Protfolio.docx
 
 ## 2.2. Prerequisites
 
