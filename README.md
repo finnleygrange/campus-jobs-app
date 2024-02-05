@@ -23,8 +23,8 @@ This is team A, submission for the Professional Software Project. This assignmen
 
 ## 1.4. Built With
 
-- Php laravel
-- Exel
+- PHP Laravel
+- Excel
 
 # 2. Getting Setup
 
