@@ -1,89 +1,108 @@
-### Campus Jobs - Team A
-*************************
+# Campus Jobs Automation System
 
-# 1. About The Project
+The Campus Jobs Automation System is a web-based application designed to improve the process of tracking and approving student work hours. The system aims to automate the approval process while also ensuring compliance with visa regulations for international students.
 
-The system should identify the hours that each student is working and approve them automatically. The system needs to be able to differentiate students on a work visa and approve them differently, based on the restricted hours. 
 
-## 1.1. Submission Title
+## Table of Contents
 
- Campus Jobs 
+1. [Introduction](#introduction)
+2. [Prerequisites](#prerequisites)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Contributing](#contributing)
+6. [Credits](#credits)
+8. [Additional Information](#additional-information)
 
-## 1.2. Developer Names
 
- Finnley Grange, 
- Daiana A. Patachia-Popa,
- Purandare Udayan, 
- Perkins Phoebe, 
- Harvey Spencer.
 
-## 1.3. Release Notes
+## Prerequisites
 
-This is team A, submission for the Professional Software Project. This assignment tasked us to create an app that turns spreadsheet into a database. and also allows to edit it and turns it back in spreadsheet if is needed.
+Before you begin, ensure you have the following prerequisites installed on your system:
 
-## 1.4. Built With
+**1. Docker Desktop:**
 
-- PHP Laravel
-- Excel
+Download and install Docker Desktop from the [official website](https://www.docker.com/products/docker-desktop/).
 
-## 2. Getting Setup
+Ensure that virtualization is enabled in your system's BIOS settings for optimal performance.
 
-1. **Install Docker**: 
-   - Download Docker Desktop from [here](https://www.docker.com/products/docker-desktop/).
+**2. PHP:**
 
-2. **Install WSL (Windows Subsystem for Linux)**:
-   - Open Command Prompt as administrator and execute the following command:
-     ```
-     wsl --install
-     ```
+Download the PHP installer from the [official PHP website](https://windows.php.net/download#php-8.3).
 
-3. **Install PHP**:
-   - Download the PHP zip file from [here](https://windows.php.net/download#php-8.3) and extract it to `C:/`.
+Choose the appropriate PHP version and architecture for your operating system. Ensure that you download the thread-safe version if you plan to use PHP with a web server like Apache or Nginx.
 
-4. **Install Composer**:
-   - Download `composer-setup.exe` from [here](https://getcomposer.org/download/).
+Make sure to add PHP to your system's PATH environment variable during the installation process.
 
-5. **Clone Project Repositories**:
-   - Clone the project repositories from [GitHub - campus-jobs-team-a](https://github.com/finnleygrange/campus-jobs-team-a).
+**3. Composer:**
 
-6. **Open Project in VSCode**:
-   - Open VSCode and navigate to the `campus-jobs-app` directory.
+Download `composer-setup.exe` from [here](https://getcomposer.org/download/).
+
+Follow the installation instructions provided on the Composer website.
+
+**4. Node.js:**
+
+Download Node.js from [here](https://nodejs.org/en/download/current).
+
+Follow the installation instructions provided for your operating system.
+
+**5. Windows Subsystem for Linux (WSL):**
+
+If you're using Windows, ensure that Windows Subsystem for Linux (WSL) is installed and configured on your system. You can follow the instructions provided [here](https://docs.microsoft.com/en-us/windows/wsl/install).
+
+### Notes:
+
+- Make sure to check the system requirements and compatibility of Docker Desktop, PHP, Composer, Node.js, and WSL with your operating system before installation.
+- For more detailed information about Laravel and its features, refer to the [Laravel Documentation](https://laravel.com/docs/10.x).
+
+
+
+## Getting Started
+
+1. **Clone Project Repositories**:
+   - Clone the project repositories from [GitHub - campus-jobs-app](https://github.com/finnleygrange/campus-jobs-team-a).
+
+2. **Open Project in VSCode**:
+   - Navigate to the `campus-jobs-app` directory using VSCode.
    - Open a new terminal within VSCode.
 
-7. **Install Dependencies**:
-   - Run the following command in the terminal:
-     ```
+3. **Install Dependencies**:
+   - In the terminal, execute the following commands:
+     ```bash
      composer install
+     npm install
      ```
 
-8. **Start WSL**:
-   - Run the following command in the terminal:
-     ```
+4. **Start WSL**:
+   - Launch WSL by running the following command in the terminal:
+     ```bash
      wsl
      ```
 
-9. **Run Project in Docker**:
+5. **Run Project in Docker**:
    - Execute the following command in the terminal:
-     ```
+     ```bash
      ./vendor/bin/sail up
      ```
-   
-10. **View Project**:
-   - Open your browser and go to `localhost` to view the project.
 
-## 2.1. Contents of Submission
+6. **View Project**:
+   - Open your web browser and navigate to `localhost` to view the project.
 
-List all contents of your submission here, such as:
 
-- Group Protfolio.docx
+## Contributing
 
-## 2.2. Prerequisites
+We welcome contributions from the community to improve our project. If you'd like to contribute, please follow these steps:
 
-- PHP
-- Composer
-- WSL
-- Docker
+1. Fork the repository.
+2. Make your changes.
+3. Submit a pull request.
 
-## 2.3. Installation
+Thank you for your interest in contributing to our project!
 
-Explain how to install your software to run. For example "Unzip the submission folder and load it into IntelliJ IDEA. Ensure you have the prerequisites installed and are imported correctly at the top of the files etc..."
+
+## Contributors
+
+[Finnley Grange](https://github.com/finnleygrange) <br />
+[Daiana A. Patachia-Popa](https://github.com/DaianaPopa) <br />
+[Perkins Phoebe](https://github.com/phoebiep) <br />
+Purandare Udayan <br />
+Harvey Spencer <br />
