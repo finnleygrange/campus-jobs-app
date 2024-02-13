@@ -7,7 +7,7 @@ The Campus Jobs Automation System is a web-based application designed to improve
 
 1. [Introduction](#campus-jobs-automation-system)
 2. [Prerequisites](#prerequisites)
-3. [Getting Started](#gettingstarted)
+3. [Getting Started](#getting-started)
 6. [Credits](#credits)
 
 
