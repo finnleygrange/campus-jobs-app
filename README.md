@@ -57,7 +57,7 @@ If you're using Windows, ensure that Windows Subsystem for Linux (WSL) is instal
 ## Getting Started
 
 1. **Clone Project Repositories**:
-   - Clone the project repositories from [GitHub - campus-jobs-app](https://github.com/finnleygrange/campus-jobs-team-a).
+   - Clone the project repositories `git clone https://github.com/finnleygrange/campus-jobs-app.git`.
 
 2. **Open Project in VSCode**:
    - Navigate to the `campus-jobs-app` directory using VSCode.
@@ -65,6 +65,7 @@ If you're using Windows, ensure that Windows Subsystem for Linux (WSL) is instal
 
 3. **Install Dependencies**:
    - In the terminal, execute the following commands:
+     
      ```bash
      composer install
      npm install
@@ -72,12 +73,14 @@ If you're using Windows, ensure that Windows Subsystem for Linux (WSL) is instal
 
 4. **Start WSL**:
    - Launch WSL by running the following command in the terminal:
+   - 
      ```bash
      wsl
      ```
 
 5. **Run Project in Docker**:
    - Execute the following command in the terminal:
+   - 
      ```bash
      ./vendor/bin/sail up
      ```
