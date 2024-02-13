@@ -7,11 +7,10 @@ The Campus Jobs Automation System is a web-based application designed to improve
 
 1. [Introduction](#introduction)
 2. [Prerequisites](#prerequisites)
-3. [Installation](#installation)
-4. [Usage](#usage)
+3. [Getting Started](#gettingstarted)
 5. [Contributing](#contributing)
 6. [Credits](#credits)
-8. [Additional Information](#additional-information)
+
 
 
 
@@ -99,7 +98,7 @@ We welcome contributions from the community to improve our project. If you'd lik
 Thank you for your interest in contributing to our project!
 
 
-## Contributors
+## Credits
 
 [Finnley Grange](https://github.com/finnleygrange) <br />
 [Daiana A. Patachia-Popa](https://github.com/DaianaPopa) <br />
