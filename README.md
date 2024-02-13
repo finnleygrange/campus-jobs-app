@@ -15,37 +15,37 @@ The Campus Jobs Automation System is a web-based application designed to improve
 
 ## Prerequisites
 
-Before you begin, ensure you have the following prerequisites installed on your system:
+- Before you begin, ensure you have the following prerequisites installed on your system:
 
 **1. Docker Desktop:**
 
-Download and install Docker Desktop from the [official website](https://www.docker.com/products/docker-desktop/).
+- Download and install Docker Desktop from the [official website](https://www.docker.com/products/docker-desktop/).
 
-Ensure that virtualization is enabled in your system's BIOS settings for optimal performance.
+= Ensure that virtualization is enabled in your system's BIOS settings for optimal performance.
 
 **2. PHP:**
 
-Download the PHP installer from the [official PHP website](https://windows.php.net/download#php-8.3).
+- Download the PHP installer from the [official PHP website](https://windows.php.net/download#php-8.3).
 
-Choose the appropriate PHP version and architecture for your operating system. Ensure that you download the thread-safe version if you plan to use PHP with a web server like Apache or Nginx.
+- Choose the appropriate PHP version and architecture for your operating system. Ensure that you download the thread-safe version if you plan to use PHP with a web server like Apache or Nginx.
 
-Make sure to add PHP to your system's PATH environment variable during the installation process.
+- Make sure to add PHP to your system's PATH environment variable during the installation process.
 
 **3. Composer:**
 
-Download `composer-setup.exe` from [here](https://getcomposer.org/download/).
+- Download `composer-setup.exe` from [here](https://getcomposer.org/download/).
 
-Follow the installation instructions provided on the Composer website.
+- Follow the installation instructions provided on the Composer website.
 
 **4. Node.js:**
 
-Download Node.js from [here](https://nodejs.org/en/download/current).
+- Download Node.js from [here](https://nodejs.org/en/download/current).
 
-Follow the installation instructions provided for your operating system.
+- Follow the installation instructions provided for your operating system.
 
 **5. Windows Subsystem for Linux (WSL):**
 
-If you're using Windows, ensure that Windows Subsystem for Linux (WSL) is installed and configured on your system. You can follow the instructions provided [here](https://docs.microsoft.com/en-us/windows/wsl/install).
+- If you're using Windows, ensure that Windows Subsystem for Linux (WSL) is installed and configured on your system. You can follow the instructions provided [here](https://docs.microsoft.com/en-us/windows/wsl/install).
 
 
 ### Notes:
