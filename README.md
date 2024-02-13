@@ -73,7 +73,7 @@ If you're using Windows, ensure that Windows Subsystem for Linux (WSL) is instal
 
 4. **Start WSL**:
    - Launch WSL by running the following command in the terminal:
-   - 
+     
      ```bash
      wsl
      ```
