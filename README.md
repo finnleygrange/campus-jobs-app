@@ -27,7 +27,7 @@ Before you begin, ensure you have the following prerequisites installed on your 
 
 - Download the PHP installer from the [official PHP website](https://windows.php.net/download#php-8.3).
 
-- Choose the appropriate PHP version and architecture for your operating system. Ensure that you download the thread-safe version if you plan to use PHP with a web server like Apache or Nginx.
+- Select the appropriate PHP version and architecture for your operating system. Ensure to download the thread-safe version if applicable.
 
 - Make sure to add PHP to your system's PATH environment variable during the installation process.
 
