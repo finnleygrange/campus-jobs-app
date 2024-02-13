@@ -49,36 +49,38 @@ Before you begin, ensure you have the following prerequisites installed on your 
 
 ## Getting Started
 
-1. **Clone Project Repositories**:
-   - Clone the project repositories `git clone https://github.com/finnleygrange/campus-jobs-app.git`.
+**1. Clone Project Repository**:
 
-2. **Open Project in VSCode**:
-   - Navigate to the `campus-jobs-app` directory using VSCode.
-   - Open a new terminal within VSCode.
+- Clone the project repositories `git clone https://github.com/finnleygrange/campus-jobs-app.git`.
 
-3. **Install Dependencies**:
-   - In the terminal, execute the following commands:
-     
-     ```bash
-     composer install
-     npm install
-     ```
+**2. Open Project in VSCode**:
 
-4. **Start WSL**:
-   - Launch WSL by running the following command in the terminal:
+- Navigate to the `campus-jobs-app` directory using VSCode.
+- Open a new terminal within VSCode.
+
+**3. Install Dependencies**:
+- In the terminal, execute the following commands:
+  
+  ```bash
+  composer install
+  npm install
+  ```
+
+**4. Start WSL**:
+- Launch WSL by running the following command in the terminal:
      
      ```bash
      wsl
      ```
 
-5. **Run Project in Docker**:
+**5. Run Project in Docker**:
    - Execute the following command in the terminal:
-   - 
+     
      ```bash
      ./vendor/bin/sail up
      ```
 
-6. **View Project**:
+**6. View Project**:
    - Open your web browser and navigate to `localhost` to view the project.
 
 ## Credits
