@@ -47,13 +47,6 @@ Before you begin, ensure you have the following prerequisites installed on your 
 
 - If you're using Windows, ensure that Windows Subsystem for Linux (WSL) is installed and configured on your system. You can follow the instructions provided [here](https://docs.microsoft.com/en-us/windows/wsl/install).
 
-
-### Notes:
-
-- Make sure to check the system requirements and compatibility of Docker Desktop, PHP, Composer, Node.js, and WSL with your operating system before installation.
-- For more detailed information about Laravel and its features, refer to the [Laravel Documentation](https://laravel.com/docs/10.x).
-
-
 ## Getting Started
 
 1. **Clone Project Repositories**:
