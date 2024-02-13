@@ -15,7 +15,7 @@ The Campus Jobs Automation System is a web-based application designed to improve
 
 ## Prerequisites
 
-- Before you begin, ensure you have the following prerequisites installed on your system:
+Before you begin, ensure you have the following prerequisites installed on your system:
 
 **1. Docker Desktop:**
 
