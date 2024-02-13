@@ -8,7 +8,6 @@ The Campus Jobs Automation System is a web-based application designed to improve
 1. [Introduction](#introduction)
 2. [Prerequisites](#prerequisites)
 3. [Getting Started](#gettingstarted)
-5. [Contributing](#contributing)
 6. [Credits](#credits)
 
 
@@ -48,11 +47,11 @@ Follow the installation instructions provided for your operating system.
 
 If you're using Windows, ensure that Windows Subsystem for Linux (WSL) is installed and configured on your system. You can follow the instructions provided [here](https://docs.microsoft.com/en-us/windows/wsl/install).
 
+
 ### Notes:
 
 - Make sure to check the system requirements and compatibility of Docker Desktop, PHP, Composer, Node.js, and WSL with your operating system before installation.
 - For more detailed information about Laravel and its features, refer to the [Laravel Documentation](https://laravel.com/docs/10.x).
-
 
 
 ## Getting Started
@@ -85,18 +84,6 @@ If you're using Windows, ensure that Windows Subsystem for Linux (WSL) is instal
 
 6. **View Project**:
    - Open your web browser and navigate to `localhost` to view the project.
-
-
-## Contributing
-
-We welcome contributions from the community to improve our project. If you'd like to contribute, please follow these steps:
-
-1. Fork the repository.
-2. Make your changes.
-3. Submit a pull request.
-
-Thank you for your interest in contributing to our project!
-
 
 ## Credits
 
