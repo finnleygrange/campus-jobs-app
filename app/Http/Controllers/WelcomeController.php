@@ -26,10 +26,10 @@ class WelcomeController extends Controller
         //     echo $student->name. "<br>";
         // }
 
-            $student = new Student();
-            $student->name = "New";
-            $student->email = "email@email.com";
-            $student->save();
+        // $student = new Student();
+        // $student->name = "New";
+        // $student->email = "email@email.com";
+        // $student->save();
 
         // return view('welcome');
     }
