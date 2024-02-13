@@ -21,7 +21,7 @@ Before you begin, ensure you have the following prerequisites installed on your 
 
 - Download and install Docker Desktop from the [official website](https://www.docker.com/products/docker-desktop/).
 
-- Ensure that virtualization is enabled in your system's BIOS settings for optimal performance.
+- Make sure the Hyper-V feature is enabled in your system's Windows features for optimal performance.
 
 **2. PHP:**
 
