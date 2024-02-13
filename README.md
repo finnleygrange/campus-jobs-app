@@ -21,7 +21,7 @@ The Campus Jobs Automation System is a web-based application designed to improve
 
 - Download and install Docker Desktop from the [official website](https://www.docker.com/products/docker-desktop/).
 
-= Ensure that virtualization is enabled in your system's BIOS settings for optimal performance.
+- Ensure that virtualization is enabled in your system's BIOS settings for optimal performance.
 
 **2. PHP:**
 
