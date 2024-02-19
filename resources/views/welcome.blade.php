@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ config('app.name') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -29,7 +29,7 @@
                     @endauth
                 </div>
             @endif
-            <h1 class="text-5xl dark:text-gray-200">Campus Jobs Automation System</h1>
+            <h1 class="text-5xl dark:text-gray-200">Welcome To {{ config('app.name') }}!</h1>
         </div>
     </body>
 </html>
