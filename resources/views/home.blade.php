@@ -10,6 +10,11 @@
 </head>
 <body>
     <h1>Welcome</h1>
+    <ul>
+        
+        <a href="{{ url('login') }}">link to login</a>
+        
+    </ul>
 </body>
 </html>
 @endsection

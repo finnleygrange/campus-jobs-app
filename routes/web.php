@@ -29,3 +29,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::view('home', 'home');
+Route::view('convert', 'convert');
+Route::view('/', "home");
+Route::view('edit', 'edit');
