@@ -18,15 +18,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/timesheet', function () {
-    return view('timesheet');
-})->name('timesheet');
-
-Route::get('/reports', function () {
-    return view('reports');
-})->name('reports');
-
-
+Route::middleware('auth')->group(function () {
+    Route::get('/timesheet', function () {
+        return view('timesheet');
+    })->name('timesheet');
+    
+    Route::get('/reports', function () {
+        return view('reports');
+    })->name('reports');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
