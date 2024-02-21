@@ -1,6 +1,11 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TimesheetController;
+use App\Http\Controllers\TrackerController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,22 +19,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class, 'index']);
 
 Route::middleware('auth')->group(function () {
-    Route::get('/timesheet', function () {
-        return view('timesheet');
-    })->name('timesheet');
-    
-    Route::get('/reports', function () {
-        return view('reports');
-    })->name('reports');
-
-    Route::get('/tracker', function () {
-        return view('tracker');
-    })->name('tracker');
+    Route::get('/timesheet', [TimesheetController::class, 'index'])->name('timesheet');
+    Route::get('/reports', [ReportController::class, 'index'])->name('reports');
+    Route::get('/tracker', [TrackerController::class, 'index'])->name('tracker');
+    Route::get('/students', [StudentController::class, 'index'])->name('student');
 });
 
 Route::get('/dashboard', function () {
