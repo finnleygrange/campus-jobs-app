@@ -1,26 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Form</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Form</title>
+<style>
+/*form*/
+input[type="submit"] {
+    width: 40px;
+}
+.twoColumn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 10px;
+}
+.twoColumn .input-form{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+}
+.twoColumn .input-form input{
+    width: 80%;
+    background: #e6e1e1;
+    color: #000;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+.twoColumn .input-form select{
+    width: 80%;
+    background: #e6e1e1;
+    color: #000;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+.input-form button{
+    align-items: center;
+    /* justify-items: center; */
+}
+.twoColumn .sideBar {
+    flex: 3;
+    width: 100%;
+    text-align: justify;
+    vertical-align: middle;
+    color: #000000;
+    font-size: 0.9rem;
+    height: fit-content;
+}
+/*search button */
+.btn1:hover{
+  background-color: #900c3f; 
+  color:white ; 
+}
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+/* card */
+.card {
+  background-color: #900c3f;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+</style>
 
-<link href="{{ URL::asset('../css/forms.css') }}" rel="stylesheet"/>
 
 </head>
 <body>
+    <div class= "container">
+         <div class= "row">
+            <div class="col-md-12">
 
-<div class="mainContainer">
-  <main>
-    <div class="banners">
-      <h2> Form </h2>
-      <p>It is imperative that student do not breach the terms of their visa by working more than 15 hours per week during term time.</p>
-    </div>
-    <section class="twoColumn">
-      <div class="input-form" style="margin-bottom: 50px;">
+                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#"><h1>Something</h1></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                             <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                  <form class="form-inline my-2 my-lg-0">
+                   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn1" type="submit">Search</button>
+                  </form>
+                 </nav>
+
+            </div>
+        </div>
+
+      <div class = "row">
+        <div class = "leftcolumn">
+            <p> is the form from the timesheet spredsheet </p>
+            <section class="twoColumn">
+
+            <div class="input-form" style="margin-bottom: 50px;">
         <form action="thankyou.php" method="post">
           <div>
              <!-- <label for="stdentNumber">Student Number</label> -->
@@ -68,21 +150,22 @@
   </div>
  <div>
   
-          
 
-            <button class="btn btn-2" type="submit" value="Send" class="sendButton">Submit</button>
+            <button class="btn1" type="submit" value="Send" class="sendButton">Submit</button>
          </div>
         </form>
         </div>
-<div class="sideBar">
-        <h3>How to find us:</h3>
-        <p> Sheffield, South Yorkshire, UK</p>
-        <p>Tel:(44) 22445050</p>
-        <p>Email: info@campusJob.com</p>
-        <br>
+
+        <div class="card">
+          <h3>How to find us:</h3>
+           <p> Sheffield, South Yorkshire, UK</p>
+           <p>Tel:(44) 22445050</p>
+          <p>Email: info@campusJob.com</p>
         </div>
-      </section>
-  </main>
+      
+
+</section>
+
 </div>
 
 </body>
