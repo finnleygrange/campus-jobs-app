@@ -26,6 +26,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/reports', function () {
         return view('reports');
     })->name('reports');
+
+    Route::get('/tracker', function () {
+        return view('tracker');
+    })->name('tracker');
 });
 
 Route::get('/dashboard', function () {
