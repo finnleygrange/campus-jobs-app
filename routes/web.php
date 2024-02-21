@@ -25,7 +25,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/timesheet', [TimesheetController::class, 'index'])->name('timesheet');
     Route::get('/reports', [ReportController::class, 'index'])->name('reports');
     Route::get('/tracker', [TrackerController::class, 'index'])->name('tracker');
-    Route::get('/students', [StudentController::class, 'index'])->name('student');
+    Route::get('/students', [StudentController::class, 'getAll'])->name('student');
+    Route::get('/students/{student_number}', [StudentController::class, 'getOne']);
 });
 
 Route::get('/dashboard', function () {

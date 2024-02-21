@@ -31,7 +31,6 @@
                                 </p>
                             </th>
                         </tr>
-                        @foreach ($students as $student)
                         <tr>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
@@ -40,9 +39,7 @@
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    <a href="{{ url('/students', $student->student_number) }}">
-                                        {{ $student->student_first_name}}
-                                    </a>
+                                    {{ $student->student_first_name}}
                                 </p>
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">
@@ -56,7 +53,6 @@
                                 </p>
                             </td>
                         </tr>
-                        @endforeach
                         
                     </table>
                 </div>
