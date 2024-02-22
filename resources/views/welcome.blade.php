@@ -30,7 +30,6 @@
                 </div>
             @endif
             <h1 class="text-5xl dark:text-gray-200">Welcome To {{ config('app.name') }}!</h1>
-            <p>helloooo</p>
         </div>
     </body>
 </html>
