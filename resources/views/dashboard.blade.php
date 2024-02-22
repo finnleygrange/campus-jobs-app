@@ -8,8 +8,18 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+                <div class="p-6 text-gray-900 dark:text-gray-100 text-center"> <!-- Added 'text-center' class here -->
+                    <p>{{ __("You're logged in!") }}</p>
+                    <div class="mt-4 flex flex-col w-1/4 mx-auto"> <!-- Added 'mx-auto' class for horizontal centering -->
+                        <!-- Student Management Button -->
+                        <a href="{{ route('students.index') }}" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 my-2 rounded">
+                            Manage Students
+                        </a>
+                        <!-- Manager Management Button -->
+                        <a href="{{ route('managers.index') }}" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 my-2 rounded">
+                            Manage Managers
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

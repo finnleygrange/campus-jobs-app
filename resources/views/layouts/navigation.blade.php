@@ -14,18 +14,16 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('tracker')" :active="request()->routeIs('tracker')">
+                        {{ __('Tracker') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('timesheet')" :active="request()->routeIs('timesheet')">
-                        {{ __('Timesheet') }}
+                        {{ __('Timesheets') }}
                     </x-nav-link>
                     <x-nav-link :href="route('reports')" :active="request()->routeIs('reports')">
                         {{ __('Reports') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('tracker')" :active="request()->routeIs('tracker')">
-                        {{ __('Tracker') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('students.index')" :active="request()->routeIs('students.index')">
-                        {{ __('Student') }}
-                    </x-nav-link>
+                    
                 </div>
             </div>
 

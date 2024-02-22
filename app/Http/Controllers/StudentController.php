@@ -29,13 +29,6 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'first_name' => 'required',
-        //     'last_name' => 'required',
-        //     'email' => 'required|email|unique:students,email',
-        //     'visa_end_date' => 'required|date',
-        // ]);
-
         $data = $request->except('_token');
 
         // Create a new student record in the database
@@ -67,13 +60,6 @@ class StudentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required|email|unique:students,email,' . $id,
-            'visa_end_date' => 'required|date',
-        ]);
-
         // Find the student by ID and update the record in the database
         $student = Student::findOrFail($id);
         $student->update($request->all());

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Manager;
 use Illuminate\Http\Request;
 
 class ManagerController extends Controller
@@ -11,7 +12,8 @@ class ManagerController extends Controller
      */
     public function index()
     {
-        //
+        $managers = Manager::all(); // Retrieve all students from the database
+        return view('managers.index', compact('managers'));
     }
 
     /**
@@ -19,7 +21,7 @@ class ManagerController extends Controller
      */
     public function create()
     {
-        //
+        return view('managers.create');
     }
 
     /**
@@ -27,7 +29,13 @@ class ManagerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $data = $request->except('_token');
+
+        // Create a new student record in the database
+        Manager::create($data);
+
+        return redirect()->route('managers.index')->with('success', 'Manager created successfully.');
     }
 
     /**
@@ -35,7 +43,8 @@ class ManagerController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $manager = Manager::findOrFail($id); // Find the student by ID
+        return view('managers.show', compact('manager'));
     }
 
     /**
@@ -43,7 +52,8 @@ class ManagerController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $manager = Manager::findOrFail($id); // Find the student by ID
+        return view('managers.edit', compact('manager'));
     }
 
     /**
@@ -51,7 +61,12 @@ class ManagerController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+
+        // Find the student by ID and update the record in the database
+        $manager = Manager::findOrFail($id);
+        $manager->update($request->all());
+
+        return redirect()->route('managers.index')->with('success', 'Manager updated successfully.');
     }
 
     /**
@@ -59,6 +74,9 @@ class ManagerController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $manager = Manager::findOrFail($id);
+        $manager->delete();
+
+        return redirect()->route('managers.index')->with('success', 'Manager deleted successfully.');
     }
 }
