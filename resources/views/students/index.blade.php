@@ -8,6 +8,11 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
+                    <div class="py-6">
+                        <a href="{{ route('students.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            Create New Student
+                        </a>
+                    </div>
                     <table class="w-full text-left table-auto min-w-max">
                         <tr>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
