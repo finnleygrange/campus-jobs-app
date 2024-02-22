@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Job;
 use Illuminate\Http\Request;
 
 class JobController extends Controller
@@ -9,9 +10,13 @@ class JobController extends Controller
     /**
      * Display a listing of the resource.
      */
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        //
+        $jobs = Job::all(); // Retrieve all students from the database
+        return view('jobs.index', compact('jobs'));
     }
 
     /**
@@ -19,7 +24,7 @@ class JobController extends Controller
      */
     public function create()
     {
-        //
+        return view('jobs.create');
     }
 
     /**
@@ -27,7 +32,13 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $data = $request->except('_token');
+
+        // Create a new student record in the database
+        Job::create($data);
+
+        return redirect()->route('jobs.index')->with('success', 'Job created successfully.');
     }
 
     /**
@@ -35,7 +46,8 @@ class JobController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $job = Job::findOrFail($id); // Find the student by ID
+        return view('jobs.show', compact('job'));
     }
 
     /**
@@ -43,7 +55,8 @@ class JobController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $job = Job::findOrFail($id); // Find the student by ID
+        return view('jobs.edit', compact('job'));
     }
 
     /**
@@ -51,7 +64,12 @@ class JobController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+
+        // Find the student by ID and update the record in the database
+        $job = Job::findOrFail($id);
+        $job->update($request->all());
+
+        return redirect()->route('jobs.index')->with('success', 'Job updated successfully.');
     }
 
     /**
@@ -59,6 +77,9 @@ class JobController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $job = Job::findOrFail($id);
+        $job->delete();
+
+        return redirect()->route('jobs.index')->with('success', 'Job deleted successfully.');
     }
 }

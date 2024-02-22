@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\JobController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReportController;
@@ -38,6 +39,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::resource('/students', StudentController::class);
     Route::resource('/managers', ManagerController::class);
+    Route::resource('/jobs', JobController::class);
 });
 
 Route::middleware('auth')->group(function () {

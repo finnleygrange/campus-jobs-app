@@ -19,6 +19,9 @@
                         <a href="{{ route('managers.index') }}" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 my-2 rounded">
                             Manage Managers
                         </a>
+                        <a href="{{ route('jobs.index') }}" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 my-2 rounded">
+                            Manage Jobs
+                        </a>
                     </div>
                 </div>
             </div>

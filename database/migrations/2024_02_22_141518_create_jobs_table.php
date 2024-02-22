@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('job_title');
             $table->string('post_number');
+            $table->string('cost_code');
             $table->decimal('pay_rate');
             $table->timestamps();
         });
