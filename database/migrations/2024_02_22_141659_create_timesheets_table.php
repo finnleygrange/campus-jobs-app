@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('roles', function (Blueprint $table) {
+        Schema::create('timesheets', function (Blueprint $table) {
             $table->id();
-            $table->string('role_name');
+            $table->foreignId('student_id')->constrained();
+            $table->foreignId('job_id')->constrained();
+            $table->decimal('pay_rate');
+            $table->integer('worked_hours');
+            $table->date('date_worked');
+            $table->foreignId('manager_id')->constrained();
             $table->timestamps();
         });
     }
@@ -23,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('timesheets');
     }
 };
