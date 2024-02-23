@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\timesheet;
 use Illuminate\Http\Request;
 
 class TimesheetController extends Controller
@@ -11,7 +12,8 @@ class TimesheetController extends Controller
      */
     public function index()
     {
-        //
+        $timesheets = Timesheet::all(); // Retrieve all Timesheets from the database
+        return view('timesheets.index', compact('timesheets'));
     }
 
     /**
@@ -19,7 +21,7 @@ class TimesheetController extends Controller
      */
     public function create()
     {
-        //
+        return view('timesheets.create');
     }
 
     /**
@@ -27,7 +29,12 @@ class TimesheetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->except('_token');
+
+        // Create a new timesheet record in the database
+        Timesheet::create($data);
+
+        return redirect()->route('timesheets.index')->with('success', 'timesheet created successfully.');
     }
 
     /**
@@ -35,7 +42,8 @@ class TimesheetController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $timesheet = Timesheet::findOrFail($id); // Find the timesheet by ID
+        return view('timesheets.show', compact('timesheet'));
     }
 
     /**
@@ -43,7 +51,8 @@ class TimesheetController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $timesheet = timesheet::findOrFail($id); // Find the timesheet by ID
+        return view('timesheets.edit', compact('timesheet'));
     }
 
     /**
@@ -51,7 +60,11 @@ class TimesheetController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // Find the timesheet by ID and update the record in the database
+        $timesheet = Timesheet::findOrFail($id);
+        $timesheet->update($request->all());
+
+        return redirect()->route('timesheets.index')->with('success', 'timesheet updated successfully.');
     }
 
     /**
@@ -59,6 +72,9 @@ class TimesheetController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $timesheet = timesheet::findOrFail($id);
+        $timesheet->delete();
+
+        return redirect()->route('timesheets.index')->with('success', 'timesheet deleted successfully.');
     }
 }

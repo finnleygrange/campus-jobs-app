@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/students', StudentController::class);
     Route::resource('/managers', ManagerController::class);
     Route::resource('/jobs', JobController::class);
+    Route::resource('/timesheets', TimesheetController::class);
 });
 
 Route::middleware('auth')->group(function () {
