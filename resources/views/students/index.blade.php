@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-white leading-tight">
             {{ __('Students') }}
         </h2>
     </x-slot>
@@ -11,7 +11,7 @@
                     <div class="py-6">
                         <form action="{{ route('students.create') }}" method="GET">
                             @csrf
-                            <button type="submit" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 my-2 rounded">
+                            <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
                                 Create New Student
                             </button>
                         </form>
@@ -78,13 +78,29 @@
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <div class="flex">
-                                    <a href="{{ route('students.show', $student->id) }}" class="mr-2 text-indigo-600 hover:text-indigo-900">Show</a>
-                                    <a href="{{ route('students.edit', $student->id) }}" class="mr-2 text-indigo-600 hover:text-indigo-900">Edit</a>
-                                    <form action="{{ route('students.destroy', $student->id) }}" method="POST" class="inline">
+                                    <a href="{{ route('students.show', $student->id) }}" class="mr-2 text-blue-400 hover:text-blue-600 flex justify-items-center items-center">
+                                        <span class="material-symbols-outlined">
+                                            info
+                                            </span></a>
+                                    <a href="{{ route('students.edit', $student->id) }}" class="mr-2 text-gray-600 hover:text-gray-800 flex justify-items-center items-center">
+                                        <span class="material-symbols-outlined">
+                                            edit
+                                            </span></a>
+                                    <form id="deleteForm" action="{{ route('students.destroy', $student->id) }}" method="POST" class="inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="text-red-600 hover:text-red-900">Delete</button>
+                                        <button type="submit" class="text-red-600 hover:text-red-800 flex justify-items-center items-center"><span class="material-symbols-outlined">
+                                            delete
+                                            </span></button>
                                     </form>
+                                    <script>
+                                        document.getElementById('deleteForm').addEventListener('submit', function(event) {
+                                            var confirmation = confirm("Are you sure you want to delete?");
+                                            if (!confirmation) {
+                                                event.preventDefault();
+                                            }
+                                        });
+                                    </script>
                                 </div>
                             </td>
                         </tr>

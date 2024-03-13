@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-white leading-tight">
             {{ __('Manager Details') }}
         </h2>
     </x-slot>
@@ -18,6 +18,9 @@
                     <div class="mb-4">
                         <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Manager Email: {{ $manager->manager_email }}</p>
                     </div>
+                    <button class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
+                        <a href="{{ route('managers.index') }}" class="">Back</a>
+                    </button>
                 </div>
             </div>
         </div>

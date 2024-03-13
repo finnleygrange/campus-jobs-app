@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-white leading-tight">
             {{ __('Student Details') }}
         </h2>
     </x-slot>
@@ -21,9 +21,12 @@
                     <div class="mb-4">
                         <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Email Address: {{ $student->student_email_address }}</p>
                     </div>
-                    <div class="">
+                    <div class="mb-4">
                         <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Visa End Date: {{ $student->visa_end_date }}</p>
                     </div>
+                    <button class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
+                        <a href="{{ route('students.index') }}" class="">Back</a>
+                    </button>
                 </div>
             </div>
         </div>
