@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-white dark:text-gray-200 leading-tight">
             {{ __('Report') }}
         </h2>
     </x-slot>
@@ -34,22 +34,22 @@
                             <tr>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $reports->date}}
+                                    {{ $report->date}}
                                 </p>
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $reports->manager_name}}
+                                    {{ $report->manager_name}}
                                 </p>
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $reports->hours_requested}}
+                                    {{ $report->hours_requested}}
                                 </p>
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $reports->job_title}}
+                                    {{ $report->job_title}}
                                 </p>
                             </td>
                         </tr>
