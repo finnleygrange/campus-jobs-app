@@ -44,6 +44,18 @@
                             <label for="week_commencing" class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Week Commencing (Please select the date this student is due to work within this assignment)</label>
                             <input type="date" name="week_commencing" id="week_commencing" class="mt-1 p-2 border rounded-md w-full" required>
                         </div>
+                        <div class="mb-4">
+                            <label for="student_assignment" class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Student Assignment i.e. Open Day/ Clearing/ Research Work</label>
+                            <input type="text" name="student_assignment" id="student_assignment" class="mt-1 p-2 border rounded-md w-full" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="hours" class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Planned amount of hours to be worked per working week (Please enter the amount of hours this student will work on the selected day/ week. Students cannot work more than 15 hours per week) </label>
+                            <input type="text" name="hours" id="hours" class="mt-1 p-2 border rounded-md w-full" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="week_commencing" class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Your Line Manager Name</label>
+                            <input type="text" name="week_commencing" id="week_commencing" class="mt-1 p-2 border rounded-md w-full" required>
+                        </div>
                         <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
                             Submit
                         </button>
