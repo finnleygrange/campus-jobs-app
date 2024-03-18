@@ -7,9 +7,12 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
+         Import Timesheet
+        </button>
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="relative flex flex-col w-full h-full overflow-scroll shadow-md rounded-xl bg-clip-border text-gray-900 dark:text-gray-100 p-6">
-                    <table class="w-full text-left table-auto min-w-max">
+            <div class="relative flex flex-col w-full h-full overflow-scroll shadow-md rounded-xl bg-clip-border text-gray-900 dark:text-gray-100 p-6">
+                <table class="w-full text-left table-auto min-w-max">
                         <tr>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">

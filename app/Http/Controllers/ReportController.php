@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\timesheet;
+use App\Models\report;
 use Illuminate\Http\Request;
 
 class ReportController extends Controller
 {
-    /**
+   /**
      * Display a listing of the resource.
      */
     public function index()

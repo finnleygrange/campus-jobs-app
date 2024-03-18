@@ -27,7 +27,7 @@ Route::get('/', [WelcomeController::class, 'index']);
 Route::middleware('auth')->group(function () {
     Route::view('/test', 'test');
     Route::view('/timesheet', 'timesheet')->name('timesheet');
-    Route::view('/reports', 'reports')->name('reports');
+    Route::view('/reports.index', 'reports')->name('reports');
     Route::view('/tracker', 'tracker')->name('tracker');
 });
 
@@ -41,7 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/managers', ManagerController::class);
     Route::resource('/jobs', JobController::class);
     Route::resource('/timesheets', TimesheetController::class);
-   /* Route::resource('/reports', ReportController::class);*/
+    Route::resource('/reports', ReportController::class);
 });
 
 Route::middleware('auth')->group(function () {

@@ -32,8 +32,8 @@
                                 </p>
                             </th>
                         </tr>
-                     <!--   do not work
-                         @foreach ($showReports as $report)
+
+                         @foreach ($reports as $report)
                         <tr>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
@@ -57,7 +57,6 @@
                             </td>
                         </tr>
                         @endforeach
--->
                     </table>
                 </div>
             </div>
