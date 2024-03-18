@@ -10,19 +10,19 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                 <div class="mb-4">
-                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">ID: {{ $report->id }}</p>
+                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Report ID: {{ $report->id }}</p>
                     </div>
                     <div class="mb-4">
-                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Date: {{ $report->created_at }}</p>
+                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Date and Time: {{ $report->created_at }}</p>
                     </div>
                     <div class="mb-4">
                         <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Manager Name: {{ $report->manager_name }}</p>
                     </div>
                     <div class="mb-4">
-                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Hours requested: {{ $report->hours_requested }}</p>
+                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Job title: {{ $report->job_title }}</p>
                     </div>
                     <div class="mb-4">
-                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Job title: {{ $report->job_title }}</p>
+                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Hours requested: {{ $report->hours_requested }}</p>
                     </div>
                     <button class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
                         <a href="{{ route('reports.index') }}" class="">Back</a>

@@ -17,10 +17,6 @@
                             <input type="text" name="report_id" id="report_id" value="{{ $report->id }}" class="mt-1 p-2 border rounded-md w-full" required>
                         </div>
                         <div class="mb-4">
-                            <label for="date" class="block font-sans text-sm antialiased font-normal leading-none">Student Number</label>
-                            <input type="date" name="date" id="date" value="{{ $report->date }}" class="mt-1 p-2 border rounded-md w-full" placeholder="Date" required>
-                        </div>
-                        <div class="mb-4">
                             <label for="manager_name" class="block font-sans text-sm antialiased font-normal leading-none">Manager Name</label>
                             <input type="text" name="manager_name" id="manager_name" value="{{ $report->manager_name }}" class="mt-1 p-2 border rounded-md w-full" placeholder="Name" required>
                         </div>
@@ -37,7 +33,7 @@
                                 Save
                             </button>
                             <button class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
-                                <a href="{{ route('students.index') }}" class="">Cancel</a>
+                                <a href="{{ route('reports.index') }}" class="">Cancel</a>
                             </button>
                         </div>
                     </form>

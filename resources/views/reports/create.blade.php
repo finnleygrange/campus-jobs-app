@@ -11,10 +11,6 @@
                     <form action="{{ route('reports.store') }}" method="POST">
                         @csrf
                         <div class="mb-4">
-                            <label for="date" class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Date</label>
-                            <input type="date" name="date" id="date" class="mt-1 p-2 border rounded-md w-full" placeholder="Date" required>
-                        </div>
-                        <div class="mb-4">
                             <label for="manager_name" class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Line manager Name</label>
                             <input type="text" name="manager_name" id="manager_name" class="mt-1 p-2 border rounded-md w-full" placeholder="Manager Name" required>
                         </div>

@@ -27,11 +27,6 @@
                         <tr>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
-                                    Report Id
-                                </p>
-                            </th>
-                            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
-                                <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
                                     Date
                                 </p>
                             </th>
@@ -42,12 +37,12 @@
                             </th>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
-                                    Requested Hours
+                                    Job Title
                                 </p>
                             </th>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
-                                    Job Title
+                                    Requested Hours
                                 </p>
                             </th>
                         </tr>
@@ -55,12 +50,7 @@
                         <tr>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $report->id}}
-                                </p>
-                            </td>
-                            <td class="p-4 border-b border-blue-gray-50">
-                                <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $report->date}}
+                                    <span>{{ $report->created_at->diffForHumans()}}</span>
                                 </p>
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">
@@ -70,12 +60,12 @@
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $report->hours_requested}}
+                                    {{ $report->job_title}}
                                 </p>
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">
-                                <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $report->job_title}}
+                            <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+                                    {{ $report->hours_requested}}
                                 </p>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <div class="flex">
