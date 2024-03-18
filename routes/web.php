@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\ProfileController;
@@ -29,6 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::view('/timesheet', 'timesheet')->name('timesheet');
     Route::view('/reports', 'reports')->name('reports');
     Route::view('/tracker', 'tracker')->name('tracker');
+    Route::view('/form', 'form.create')->name('form.create');
+    Route::post('/form', [FormController::class, 'store'])->name('form.store');
 });
 
 Route::get('/dashboard', function () {
