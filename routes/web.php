@@ -35,7 +35,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-
 Route::middleware('auth')->group(function () {
     Route::resource('/students', StudentController::class);
     Route::resource('/managers', ManagerController::class);
