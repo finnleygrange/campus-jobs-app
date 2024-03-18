@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
-            $table->date('date');
             $table->string('job_title');
             $table->string('manager_name');
             $table->integer('hours_requested');
