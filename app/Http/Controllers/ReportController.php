@@ -24,6 +24,15 @@ class ReportController extends Controller
         return view('reports.create');
     }
 
+    public function showTable(Request $request)
+    {
+      $date = $request->input('date');
+      // Fetch data from the database based on the selected date
+      $reports = Report::whereDate('created_at', $date)->get();
+      return view('reports.show')->with('reports', $reports);
+    }
+
+
     /**
      * Store a newly created resource in storage.
      */
