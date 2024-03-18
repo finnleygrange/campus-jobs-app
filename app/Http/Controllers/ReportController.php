@@ -4,18 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\report;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class ReportController extends Controller
 {
-   /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        $reports = Report::all(); // Retrieve all reports from the database
-        return view('reports.index', compact('reports'));
-    }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -24,14 +16,22 @@ class ReportController extends Controller
         return view('reports.create');
     }
 
-    public function showTable(Request $request)
+ /**
+     * Display a listing of the resource.
+     */
+    public function index(Request $request)
     {
-      $date = $request->input('date');
-      // Fetch data from the database based on the selected date
-      $report = Report::whereDate('created_at', $date)->get();
-      return view('reports.show')->with('reports', $report);
+        $selectedWeek = $request->input('week');
+        $selectedDate = Carbon::parse($selectedWeek)->startOfWeek();
+    
+        $reports = Report::whereBetween('created_at', [
+            $selectedDate->toDateString(),
+            $selectedDate->copy()->endOfWeek()->toDateString()
+        ])->get();
+    
+        return view('reports.index', compact('reports'));
     }
-
+    
 
     /**
      * Store a newly created resource in storage.

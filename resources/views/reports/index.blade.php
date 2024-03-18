@@ -8,7 +8,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
              <form action="{{ route('reports.index') }}" method="GET">
                             @csrf
-                            <input type="date" name="date" id="date" required>
+                            <input type="week" name="week" id="week" required>
                             <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
                                 Show Report
                             </button>
@@ -95,8 +95,11 @@
                                 </div>
                             </td>
                         </tr>
-                        @endforeach
+                        @endforeach     
                     </table>
+                    @if($reports->isEmpty())
+                        <span>No reports found for the selected week.</span>
+                        @endif
                 </div>
             </div>
         </div>
