@@ -27,7 +27,7 @@ Route::get('/', [WelcomeController::class, 'index']);
 Route::middleware('auth')->group(function () {
     Route::view('/test', 'test');
     Route::view('/timesheet', 'timesheet')->name('timesheet');
-    Route::view('/reports.index', 'reports')->name('reports');
+    Route::view('/reports', 'reports')->name('reports');
     Route::view('/tracker', 'tracker')->name('tracker');
 });
 

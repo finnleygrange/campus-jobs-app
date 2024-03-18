@@ -28,8 +28,8 @@ class ReportController extends Controller
     {
       $date = $request->input('date');
       // Fetch data from the database based on the selected date
-      $reports = Report::whereDate('created_at', $date)->get();
-      return view('reports.show')->with('reports', $reports);
+      $report = Report::whereDate('created_at', $date)->get();
+      return view('reports.show')->with('reports', $report);
     }
 
 
@@ -51,8 +51,8 @@ class ReportController extends Controller
      */
     public function show(string $id)
     {
-        $reports = Report::findOrFail($id); // Find the report by ID
-        return view('reports.show', compact('reports'));
+        $report = Report::findOrFail($id); // Find the report by ID
+        return view('reports.show', compact('report'));
     }
 
     /**
@@ -60,8 +60,8 @@ class ReportController extends Controller
      */
     public function edit(string $id)
     {
-        $reports = Report::findOrFail($id); // Find the report by ID
-        return view('reports.edit', compact('reports'));
+        $report = Report::findOrFail($id); // Find the report by ID
+        return view('reports.edit', compact('report'));
     }
 
     /**
@@ -70,8 +70,8 @@ class ReportController extends Controller
     public function update(Request $request, string $id)
     {
         // Find the report by ID and update the record in the database
-        $reports = Report::findOrFail($id);
-        $reports->update($request->all());
+        $report = Report::findOrFail($id);
+        $report->update($request->all());
 
         return redirect()->route('reports.index')->with('success', 'Report updated successfully.');
     }
@@ -81,8 +81,8 @@ class ReportController extends Controller
      */
     public function destroy(string $id)
     {
-        $reports = Report::findOrFail($id);
-        $reports->delete();
+        $report = Report::findOrFail($id);
+        $report->delete();
 
         return redirect()->route('reports.index')->with('success', 'Report deleted successfully.');
     }

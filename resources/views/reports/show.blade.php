@@ -13,7 +13,7 @@
                         <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">ID: {{ $report->id }}</p>
                     </div>
                     <div class="mb-4">
-                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Date: {{ $report->date }}</p>
+                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Date: {{ $report->created_at }}</p>
                     </div>
                     <div class="mb-4">
                         <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Manager Name: {{ $report->manager_name }}</p>

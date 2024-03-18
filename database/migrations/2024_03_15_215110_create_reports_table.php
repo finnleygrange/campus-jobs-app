@@ -16,7 +16,7 @@ return new class extends Migration
             $table->date('date');
             $table->string('job_title');
             $table->string('manager_name');
-            $table->int('hours_requested');
+            $table->integer('hours_requested');
             $table->timestamps();
         });
     }
