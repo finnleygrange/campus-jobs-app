@@ -29,7 +29,11 @@
                         </div>
                         <div class="mb-4">
                             <label for="worked_hours" class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Worked Hours</label>
-                            <input type="text" name="worked_hours" id="worked_hours" class="mt-1 p-2 border rounded-md w-full bg-gray-700 text-white" placeholder="Worked Hours" required>
+                            <input type="date" name="worked_hours" id="worked_hours" class="mt-1 p-2 border rounded-md w-full bg-gray-700 text-white" placeholder="Worked Hours" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="worked_hours" class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Date Worked </label>
+                            <input type="date" name="date_worked" id="date_worked" class="mt-1 p-2 border rounded-md w-full bg-gray-700 text-white" placeholder="Date Worked" required>
                         </div>
                         <div>
                             <button type="submit" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 my-2 rounded">

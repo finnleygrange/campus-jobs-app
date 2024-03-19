@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <form action="{{ route('timesheet') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('timesheets.index') }}" method="POST" enctype="multipart/form-data">
            @csrf
              <input type="file" name="excel_file">
               <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
@@ -16,7 +16,13 @@
         </form>
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="relative flex flex-col w-full h-full overflow-scroll shadow-md rounded-xl bg-clip-border text-gray-900 dark:text-gray-100 p-6">
-                <table class="w-full text-left table-auto min-w-max">
+            <form action="{{ route('timesheets.create') }}" method="GET">
+                            @csrf
+                            <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
+                                Create New Timesheet
+                            </button>
+                        </form>
+            <table class="w-full text-left table-auto min-w-max">
                         <tr>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
@@ -94,6 +100,11 @@
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
                                     {{ $timesheet->cost_number}}
+                                </p>
+                            </td>
+                            <td class="p-4 border-b border-blue-gray-50">
+                                <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+                                    {{ $timesheet->created_at}}
                                 </p>
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">

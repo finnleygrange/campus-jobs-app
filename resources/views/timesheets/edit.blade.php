@@ -13,24 +13,20 @@
                         @csrf
                         @method('PUT')
                         <div class="mb-4">
-                            <label for="student_number" class="block font-sans text-sm antialiased font-normal leading-none">Student Number</label>
-                            <input type="text" name="student_number" id="student_number" value="{{ $student->id }}" class="mt-1 p-2 border rounded-md w-full" placeholder="Student number" required>
+                            <label for="worked_hours" class="block font-sans text-sm antialiased font-normal leading-none">Worked Hours</label>
+                            <input type="int" name="worked_hours" id="worked_hours" value="{{ $timesheet->worked_hours }}" class="mt-1 p-2 border rounded-md w-full" placeholder="Worked Hours" required>
                         </div>
                         <div class="mb-4">
-                            <label for="student_first_name" class="block font-sans text-sm antialiased font-normal leading-none">Student First Name</label>
-                            <input type="text" name="student_first_name" id="student_first_name" value="{{ $student->student_first_name }}" class="mt-1 p-2 border rounded-md w-full" placeholder="First name" required>
+                            <label for="date_worked" class="block font-sans text-sm antialiased font-normal leading-none">Date Worked</label>
+                            <input type="date" name="date_worked" id="date_worked" value="{{ $timesheet->date_worked }}" class="mt-1 p-2 border rounded-md w-full" placeholder="Date worked" required>
                         </div>
                         <div class="mb-4">
-                            <label for="student_last_name" class="block font-sans text-sm antialiased font-normal leading-none">Student Last Name</label>
-                            <input type="text" name="student_last_name" id="student_last_name" value="{{ $student->student_last_name }}" class="mt-1 p-2 border rounded-md w-full" placeholder="Last Name" required>
+                            <label for="line_manager" class="block font-sans text-sm antialiased font-normal leading-none">Line Manager Name</label>
+                            <input type="text" name="manager_id" id="manager_id" value="{{ $timesheet->manager_id }}" class="mt-1 p-2 border rounded-md w-full" placeholder="Manager Name" required>
                         </div>
                         <div class="mb-4">
-                            <label for="student_email_address" class="block font-sans text-sm antialiased font-normal leading-none">Student Email Address</label>
-                            <input type="email" name="student_email_address" id="student_email_address" value="{{ $student->student_email_address }}" class="mt-1 p-2 border rounded-md w-full" placeholder="Email address" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="visa_end_date" class="block font-sans text-sm antialiased font-normal leading-none">Visa End Date</label>
-                            <input type="date" name="visa_end_date" id="visa_end_date" value="{{ $student->visa_end_date }}" class="mt-1 p-2 border rounded-md w-full" required>
+                            <label for="submited_on" class="block font-sans text-sm antialiased font-normal leading-none">Submited on</label>
+                            <input type="date" name="submited_on" id="submited_on" value="{{ $timesheet->created_at }}" class="mt-1 p-2 border rounded-md w-full" required>
                         </div>
                         <div>
                             <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
