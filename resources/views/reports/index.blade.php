@@ -8,7 +8,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
              <form action="{{ route('reports.index') }}" method="GET">
                             @csrf
-                            <input type="week" name="week" id="week" required>
+                            <input type="week" name="week" id="week" value="{{ $selectedWeek }}" required>
                             <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
                                 Show Report
                             </button>
@@ -43,6 +43,11 @@
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
                                     Requested Hours
+                                </p>
+                            </th>
+                            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                                <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
+                                    Actions
                                 </p>
                             </th>
                         </tr>
@@ -99,7 +104,7 @@
                     </table>
                     @if($reports->isEmpty())
                         <span>No reports found for the selected week.</span>
-                        @endif
+                    @endif
                 </div>
             </div>
         </div>

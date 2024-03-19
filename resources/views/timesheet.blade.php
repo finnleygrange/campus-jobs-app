@@ -7,9 +7,13 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
-         Import Timesheet
-        </button>
+        <form action="{{ route('timesheet') }}" method="POST" enctype="multipart/form-data">
+           @csrf
+             <input type="file" name="excel_file">
+              <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
+              Import Timesheet
+              </button>
+        </form>
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="relative flex flex-col w-full h-full overflow-scroll shadow-md rounded-xl bg-clip-border text-gray-900 dark:text-gray-100 p-6">
                 <table class="w-full text-left table-auto min-w-max">

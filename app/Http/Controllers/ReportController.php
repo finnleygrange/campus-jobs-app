@@ -29,7 +29,7 @@ class ReportController extends Controller
             $selectedDate->copy()->endOfWeek()->toDateString()
         ])->get();
     
-        return view('reports.index', compact('reports'));
+        return view('reports.index', compact('reports', 'selectedWeek'));
     }
     
 

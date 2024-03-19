@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\timesheet;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class TimesheetController extends Controller
 {
@@ -23,6 +24,18 @@ class TimesheetController extends Controller
     {
         return view('timesheets.create');
     }
+
+    
+    public function importExcel(Request $request)
+    {
+        $file = $request->file('excel_file');
+    
+        Excel::import(new Timesheet, $file);
+    
+        return redirect()->back()->with('success', 'Data imported successfully!');
+    }
+    
+
 
     /**
      * Store a newly created resource in storage.
