@@ -6,6 +6,7 @@ use App\Models\timesheet;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
+
 class TimesheetController extends Controller
 {
     /**
@@ -26,15 +27,22 @@ class TimesheetController extends Controller
     }
 
     
-    public function importExcel(Request $request)
+
+    public function import(Request $request)
     {
-        $file = $request->file('excel_file');
+        $request->validate([
+            'excel_file' => 'required|file|mimes:xlsx,xls',
+        ]);
     
-        Excel::import(new Timesheet, $file);
-    
-        return redirect()->back()->with('success', 'Data imported successfully!');
+        try {
+            Excel::import(new Timesheet, $request->file('excel_file'));
+            return redirect()->route('timesheets.index')->with('success', 'Timesheets imported successfully.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error importing timesheets: ' . $e->getMessage());
+        }
     }
     
+
 
 
     /**

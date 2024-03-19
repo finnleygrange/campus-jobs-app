@@ -11,10 +11,11 @@ class Timesheet extends Model
 
     protected $fillable = [
         'timesheet_id',
-        'timesheet_student_id',
-        'timesheet_job_id',
-        'timesheet_pay_rate',
-        'timesheet_worked_hours',
-        'timesheet_date_worked',
+        'student_id',
+        'job_id',
+        'pay_rate',
+        'worked_hours',
+        'date_worked',
+        'manager_id'
     ];
 }
