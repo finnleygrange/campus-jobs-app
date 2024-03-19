@@ -6,19 +6,20 @@
     </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-             <form action="{{ route('reports.index') }}" method="GET">
-                            @csrf
-                            <input type="week" name="week" id="week" value="{{ $selectedWeek }}" required>
-                            <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
-                                Show Report
-                            </button>
-                            </form>
+             
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
+                    <form action="{{ route('reports.index') }}" method="GET" class="">
+                        @csrf
+                        <input type="week" name="week" id="week" value="{{ $selectedWeek }}" required>
+                        <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded justify-end">
+                            Show Report
+                        </button>
+                        </form>
                     <div class="py-6">
-                            <form action="{{ route('reports.create') }}" method="GET">
+                            <form action="{{ route('reports.create') }}" method="GET" class="">
                             @csrf
-                            <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
+                            <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded ">
                                 Create New Report
                             </button>
                             </form>
