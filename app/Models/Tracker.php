@@ -5,17 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Timesheet extends Model
+class Tracker extends Model
 {
     use HasFactory;
-
+    
     protected $fillable = [
-        'timesheet_id',
+        'tracker_id',
         'student_id',
-        'job_id',
-        'pay_rate',
+        'student_name',
+        'student_email_address',
+        'visa_end_date',
         'worked_hours',
-        'date_worked',
-        'manager_id',
+        'manager_name',
+        'notes',
     ];
 }

@@ -11,8 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tracker', function (Blueprint $table) {
+        Schema::create('trackers', function (Blueprint $table) {
             $table->id();
+            $table->integer('student_id');
+            $table->string('student_name');
+            $table->string('student_email_address');
+            $table->date('visa_end_date');
+            $table->string('manager_name');
+            $table->integer('worked_hours');
+            $table->string('notes');
             $table->timestamps();
         });
     }
