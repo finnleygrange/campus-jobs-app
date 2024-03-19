@@ -11,7 +11,6 @@ class Report extends Model
     
     protected $fillable = [
         'report_id',
-        'date',
         'manager_name',
         'hours_requested',
         'job_title',
