@@ -5,8 +5,7 @@
         </h2>
     </x-slot>
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-             
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"> 
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <form action="{{ route('reports.index') }}" method="GET" class="">
@@ -33,7 +32,7 @@
                             </th>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
-                                    Line Manager Name
+                                     Manager Name
                                 </p>
                             </th>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
@@ -81,13 +80,13 @@
                                             </span></a>
                                     <a href="{{ route('reports.edit', $report->id) }}" class="mr-2 text-gray-600 hover:text-gray-800 flex justify-items-center items-center">
                                         <span class="material-symbols-outlined">
-                                            edit
+                                            check
                                             </span></a>
                                     <form id="deleteForm" action="{{ route('reports.destroy', $report->id) }}" method="POST" class="inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="text-red-600 hover:text-red-800 flex justify-items-center items-center"><span class="material-symbols-outlined">
-                                            delete
+                                            close
                                             </span></button>
                                     </form>
                                     <script>

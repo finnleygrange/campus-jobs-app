@@ -35,13 +35,27 @@ class TrackerController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->except('_token');
-
-        // Create a new tracker record in the database
-        Tracker::create($data);
-
-        return redirect()->route('trackers.index')->with('success', 'Tracker created successfully.');
+        // Validate the incoming request data
+        $validatedData = $request->validate([
+            'student_id' => 'required',
+            'student_name' => 'required',
+            'student_email_address' => 'required|email',
+            'visa_end_date' => 'nullable',
+            'manager_name' => 'required',
+            'worked_hours' => 'required',
+            'notes' => 'nullable',
+        ]);
+    
+        // Create a new Tracker entry with the validated data
+        Tracker::create($validatedData);
+    
+        // Redirect back with a success message
+        return redirect()->back()->with('success', 'Tracker entry created successfully.');
     }
+    
+
+
+
 
     /**
      * Display the specified resource.

@@ -16,7 +16,7 @@ class ReportController extends Controller
         return view('reports.create');
     }
 
- /**
+    /**
      * Display a listing of the resource.
      */
     public function index(Request $request)
