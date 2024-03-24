@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\report;
+use App\Models\Tracker;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
@@ -31,8 +32,18 @@ class ReportController extends Controller
     
         // return view('reports.index', compact('reports', 'selectedWeek'));
 
-        $reports = Report::all();
-    
+        // Retrieve reports based on the selected status filter
+    $status = $request->input('status');
+
+    // Apply filter conditions
+    $query = Report::query();
+    if ($status && $status != 'all') {
+        $query->where('status', $status);
+    }
+
+    // Fetch reports
+    $reports = $query->get();
+
     return view('reports.index', compact('reports'));
     }
     
@@ -43,8 +54,6 @@ class ReportController extends Controller
     public function store(Request $request)
     {
         $data = $request->except('_token');
-        dd($data);
-
         // Create and save the report
         Report::create($data);
 
@@ -92,4 +101,36 @@ class ReportController extends Controller
 
         return redirect()->route('reports.index')->with('success', 'Report deleted successfully.');
     }
+
+
+
+    public function approve(Report $report)
+{
+    // Update report status to approved
+    $report->status = 'approved';
+    $report->save();
+
+    // Add data to master tracker
+    Tracker::create([
+        'report_id' => $report->id,
+        // Add other necessary fields from the report
+    ]);
+
+    return redirect()->back()->with('success', 'Report approved successfully.');
+}
+
+public function close(Report $report)
+{
+    // Update report status to closed
+    $report->status = 'closed';
+    $report->save();
+
+    // Add data to master tracker
+    Tracker::create([
+        'report_id' => $report->id,
+        // Add other necessary fields from the report
+    ]);
+
+    return redirect()->back()->with('success', 'Report closed successfully.');
+}
 }

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('assignment');
             $table->integer('hours_requested');
             $table->foreignId('line_manager_id');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

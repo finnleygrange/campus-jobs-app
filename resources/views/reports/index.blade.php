@@ -23,6 +23,21 @@
                                 Create New Report
                             </button>
                         </form>
+                        <div class="py-6">
+                            <form action="{{ route('reports.index') }}" method="GET" class="flex items-center">
+                                @csrf
+                                <label for="status" class="mr-2">Filter by Status:</label>
+                                <select name="status" id="status" class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md py-2 px-4 mx-2">
+                                    <option value="all" {{ request('status') == 'all' ? 'selected' : '' }}>All</option>
+                                    <option value="pending" {{ request('status') == 'pending' ? 'selected' : '' }}>Pending</option>
+                                    <option value="approved" {{ request('status') == 'approved' ? 'selected' : '' }}>Approved</option>
+                                    <option value="closed" {{ request('status') == 'closed' ? 'selected' : '' }}>Closed</option>
+                                </select>
+                                <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 ml-2 rounded">
+                                    Apply Filter
+                                </button>
+                            </form>
+                        </div>
                     </div>
                     <table class="w-full text-left table-auto min-w-max">
                         <tr>
@@ -71,6 +86,12 @@
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
                                 <p
                                     class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
+                                    Status
+                                </p>
+                            </th>
+                            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                                <p
+                                    class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
                                     idk
                                 </p>
                             </th>
@@ -92,7 +113,7 @@
                                 <td class="p-4 border-b border-blue-gray-50">
                                     <p
                                         class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                        {{ $report->student->student_number}}
+                                        {{ $report->student->student_number }}
                                     </p>
                                 </td>
                                 <td class="p-4 border-b border-blue-gray-50">
@@ -129,10 +150,16 @@
                                 <td class="p-4 border-b border-blue-gray-50">
                                     <p
                                         class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                        <span>{{ $report->created_at->diffForHumans() }}</span>
+                                        {{ $report->status }}
                                     </p>
                                 </td>
                                 <td class="p-4 border-b border-blue-gray-50">
+                                    <p
+                                        class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+                                        <span>{{ $report->created_at->diffForHumans() }}</span>
+                                    </p>
+                                </td>
+                                {{-- <td class="p-4 border-b border-blue-gray-50">
                                     <div class="flex">
                                         <a href="{{ route('reports.show', $report->id) }}"
                                             class="mr-2 text-blue-400 hover:text-blue-600 flex justify-items-center items-center">
@@ -140,17 +167,24 @@
                                                 info
                                             </span>
                                         </a>
-                                        <a href="{{ route('reports.edit', $report->id) }}"
-                                            class="mr-2 text-gray-600 hover:text-gray-800 flex justify-items-center items-center">
-                                            <span class="material-symbols-outlined">
-                                                check
-                                            </span>
-                                        </a>
-                                        <form id="deleteForm{{ $report->id }}"
-                                            action="{{ route('reports.destroy', $report->id) }}" method="POST"
-                                            class="inline">
+                                    </div>
+                                </td> --}}
+                                <td class="p-4 border-b border-blue-gray-50">
+                                    <div class="flex">
+                                        <form action="{{ route('reports.approve', $report->id) }}" method="POST"
+                                            class="mr-2">
                                             @csrf
-                                            @method('DELETE')
+                                            <button type="submit"
+                                                class="text-green-600 hover:text-green-800 flex justify-items-center items-center">
+                                                <span class="material-symbols-outlined">
+                                                    check_circle
+                                                </span>
+                                            </button>
+                                        </form>
+                                        <!-- Close button -->
+                                        <form action="{{ route('reports.close', $report->id) }}" method="POST"
+                                            class="mr-2">
+                                            @csrf
                                             <button type="submit"
                                                 class="text-red-600 hover:text-red-800 flex justify-items-center items-center">
                                                 <span class="material-symbols-outlined">
@@ -158,25 +192,27 @@
                                                 </span>
                                             </button>
                                         </form>
-                                        <script>
-                                            document.getElementById('deleteForm{{ $report->id }}').addEventListener('submit', function(event) {
-                                                var confirmation = confirm("Are you sure you want to delete?");
-                                                if (!confirmation) {
-                                                    event.preventDefault();
-                                                }
-                                            });
-                                        </script>
                                     </div>
                                 </td>
-                            </tr>
-                        @endforeach
+                                <script>
+                                    document.getElementById('deleteForm{{ $report->id }}').addEventListener('submit', function(event) {
+                                        var confirmation = confirm("Are you sure you want to delete?");
+                                        if (!confirmation) {
+                                            event.preventDefault();
+                                        }
+                                    });
+                                </script>
+                    </div>
+                </td>
+                </tr>
+                @endforeach
 
-                    </table>
-                    @if ($reports->isEmpty())
-                        <span>No reports found for the selected week.</span>
-                    @endif
-                </div>
+                </table>
+                @if ($reports->isEmpty())
+                    <span>No reports found for the selected week.</span>
+                @endif
             </div>
         </div>
+    </div>
     </div>
 </x-app-layout>

@@ -13,7 +13,7 @@ class TrackerController extends Controller
      */
     public function create()
     {
-        return view('trackers.create');
+        return view('tracker.create');
     }
 
     /**
@@ -22,11 +22,11 @@ class TrackerController extends Controller
     public function index()
     {
         // Retrieve visas that will expire within the next 30 days
-        $trackers = Tracker::where('visa_end_date', '>=', Carbon::now())
+        $tracker = tracker::where('visa_end_date', '>=', Carbon::now())
                      ->orderBy('visa_end_date')
                      ->get();
     
-        return view('trackers.index', compact('trackers'));
+        return view('tracker.index', compact('tracker'));
     }
 
 
@@ -46,11 +46,11 @@ class TrackerController extends Controller
             'notes' => 'nullable',
         ]);
     
-        // Create a new Tracker entry with the validated data
-        Tracker::create($validatedData);
+        // Create a new tracker entry with the validated data
+        tracker::create($validatedData);
     
         // Redirect back with a success message
-        return redirect()->back()->with('success', 'Tracker entry created successfully.');
+        return redirect()->back()->with('success', 'tracker entry created successfully.');
     }
     
 
@@ -62,7 +62,7 @@ class TrackerController extends Controller
      */
     public function show(string $id)
     {
-        $tracker = Tracker::findOrFail($id); // Find the Tracker by ID
+        $tracker = tracker::findOrFail($id); // Find the tracker by ID
         return view('trackers.show', compact('tracker'));
     }
 
@@ -71,8 +71,8 @@ class TrackerController extends Controller
      */
     public function edit(string $id)
     {
-        $tracker = Tracker::findOrFail($id); // Find the tracker by ID
-        return view('trackers.edit', compact('tracker'));
+        $tracker = tracker::findOrFail($id); // Find the tracker by ID
+        return view('tracker.edit', compact('tracker'));
     }
 
     /**
@@ -81,10 +81,10 @@ class TrackerController extends Controller
     public function update(Request $request, string $id)
     {
         // Find the tracker by ID and update the record in the database
-        $tracker = Tracker::findOrFail($id);
+        $tracker = tracker::findOrFail($id);
         $tracker->update($request->all());
 
-        return redirect()->route('trackers.index')->with('success', 'Tracker updated successfully.');
+        return redirect()->route('tracker.index')->with('success', 'tracker updated successfully.');
     }
 
     /**
@@ -92,9 +92,9 @@ class TrackerController extends Controller
      */
     public function destroy(string $id)
     {
-        $trackers = Tracker::findOrFail($id);
+        $trackers = tracker::findOrFail($id);
         $trackers->delete();
 
-        return redirect()->route('trackers.index')->with('success', 'Tracker deleted successfully.');
+        return redirect()->route('tracker.index')->with('success', 'tracker deleted successfully.');
     }
 }

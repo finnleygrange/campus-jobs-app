@@ -16,6 +16,7 @@ class Report extends Model
         'assignment',
         'hours_requested',
         'line_manager_id',
+        'status',
     ];
 
     // Define the relationship with the Student model

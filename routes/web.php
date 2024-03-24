@@ -33,6 +33,9 @@ Route::middleware('auth')->group(function () {
     Route::view('/tracker', 'tracker')->name('tracker');
     Route::get('/form', [FormController::class, 'index'])->name('form.index');
     Route::post('/submit-form', [ReportController::class, 'store'])->name('submitForm');
+    Route::post('/reports/{report}/approve', [ReportController::class, 'approve'])->name('reports.approve');
+    Route::post('/reports/{report}/close', [ReportController::class, 'close'])->name('reports.close');
+
 
 });
 
