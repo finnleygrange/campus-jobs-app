@@ -22,7 +22,10 @@
                         <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Cost Code: {{ $job->cost_code }}</p>
                     </div>
                     <div class="mb-4">
-                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Pay Rate: {{ $job->pay_rate }}</p>
+                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Pay Rate To October 23rd: {{ $job->pay_rate_to_oct_23 }}</p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Pay Rate After October 23rd: {{ $job->pay_rate_after_oct_23 }}</p>
                     </div>
                     <button class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
                         <a href="{{ route('jobs.index') }}" class="">Back</a>

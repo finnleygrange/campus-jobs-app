@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
             $table->string('job_title');
-            $table->string('post_number');
             $table->string('cost_code');
-            $table->decimal('pay_rate');
+            $table->string('post_number');
+            $table->decimal('pay_rate_to_oct_23');
+            $table->decimal('pay_rate_after_oct_23');
             $table->timestamps();
         });
     }

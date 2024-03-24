@@ -15,10 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('student_id')->constrained();
             $table->foreignId('job_id')->constrained();
-            $table->decimal('pay_rate');
             $table->integer('worked_hours');
-            $table->date('date_worked');
-            $table->foreignId('manager_id')->constrained();
+            $table->date('week_commencing');
+            $table->foreignId('line_manager_id')->constrained();
             $table->timestamps();
         });
     }

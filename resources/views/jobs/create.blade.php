@@ -24,8 +24,12 @@
                             <input type="text" name="cost_code" id="cost_code" class="mt-1 p-2 border rounded-md w-full" placeholder="Cost code" required>
                         </div>
                         <div class="mb-4">
-                            <label for="pay_rate" class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Pay Rate</label>
-                            <input type="text" name="pay_rate" id="pay_rate" class="mt-1 p-2 border rounded-md w-full" placeholder="Pay rate" required>
+                            <label for="pay_rate_to_oct_23" class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Pay Rate To October 23rd</label>
+                            <input type="text" name="pay_rate_to_oct_23" id="pay_rate_to_oct_23" class="mt-1 p-2 border rounded-md w-full" placeholder="Pay rate" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="pay_rate_after_oct_23" class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Pay Rate After October 23rd</label>
+                            <input type="text" name="pay_rate_after_oct_23" id="pay_rate_after_oct_23" class="mt-1 p-2 border rounded-md w-full" placeholder="Pay rate" required>
                         </div>
                         <div>
                             <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">

@@ -10,9 +10,29 @@ class Report extends Model
     use HasFactory;
     
     protected $fillable = [
-        'report_id',
-        'manager_name',
+        'student_id',
+        'job_id',
+        'week_commencing',
+        'assignment',
         'hours_requested',
-        'job_title',
+        'line_manager_id',
     ];
+
+    // Define the relationship with the Student model
+    public function student()
+    {
+        return $this->belongsTo(Student::class, 'student_id');
+    }
+
+    // Define the relationship with the Job model
+    public function job()
+    {
+        return $this->belongsTo(Job::class, 'job_id');
+    }
+
+    // Define the relationship with the LineManager model
+    public function line_manager()
+    {
+        return $this->belongsTo(LineManager::class, 'line_manager_id');
+    }
 }

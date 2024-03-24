@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
-            $table->string('job_title');
-            $table->string('manager_name');
+            $table->foreignId('student_id')->constrained();
+            $table->foreignId('job_id')->constrained();
+            $table->date('week_commencing');
+            $table->string('assignment');
             $table->integer('hours_requested');
+            $table->foreignId('line_manager_id');
             $table->timestamps();
         });
     }

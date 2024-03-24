@@ -18,12 +18,15 @@
                         <a href="{{ route('managers.index') }}" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
                             Manage Managers
                         </a>
+                        <a href="{{ route('line-managers.index') }}" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
+                            Manage Line Managers
+                        </a>
                         <a href="{{ route('jobs.index') }}" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
                             Manage Jobs
                         </a>
-
+                        
                         <!-- manager controls -->
-                        <a href="{{ route('form.create') }}" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
+                        <a href="{{ route('form.index') }}" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
                             Student Visa - Hours Tracker Form
                         </a>
                     </div>

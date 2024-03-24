@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\LineManagerController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReportController;
@@ -30,8 +31,9 @@ Route::middleware('auth')->group(function () {
     Route::view('/timesheet', 'timesheet')->name('timesheet');
     Route::view('/reports', 'reports')->name('reports');
     Route::view('/tracker', 'tracker')->name('tracker');
-    Route::view('/form', 'form.create')->name('form.create');
-    Route::post('/form', [FormController::class, 'store'])->name('form.store');
+    Route::get('/form', [FormController::class, 'index'])->name('form.index');
+    Route::post('/submit-form', [ReportController::class, 'store'])->name('submitForm');
+
 });
 
 Route::get('/dashboard', function () {
@@ -41,6 +43,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::resource('/students', StudentController::class);
     Route::resource('/managers', ManagerController::class);
+    Route::resource('/line-managers', LineManagerController::class);
     Route::resource('/jobs', JobController::class);
     Route::resource('/timesheets', TimesheetController::class);
     Route::resource('/reports', ReportController::class);

@@ -12,11 +12,10 @@ class Tracker extends Model
     protected $fillable = [
         'tracker_id',
         'student_id',
-        'student_name',
-        'student_email_address',
+        'manager_id',
+        'week_commencing',
         'visa_end_date',
         'worked_hours',
-        'manager_name',
         'notes',
     ];
 }

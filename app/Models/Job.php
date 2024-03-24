@@ -12,8 +12,9 @@ class Job extends Model
     protected $fillable = [
         'job_id',
         'job_title',
-        'post_number',
         'cost_code',
-        'pay_rate',
+        'post_number',
+        'pay_rate_to_oct_23',
+        'pay_rate_after_oct_23',
     ];
 }

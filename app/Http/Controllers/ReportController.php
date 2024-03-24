@@ -21,15 +21,19 @@ class ReportController extends Controller
      */
     public function index(Request $request)
     {
-        $selectedWeek = $request->input('week');
-        $selectedDate = Carbon::parse($selectedWeek)->startOfWeek();
+        // $selectedWeek = $request->input('week');
+        // $selectedDate = Carbon::parse($selectedWeek)->startOfWeek();
     
-        $reports = Report::whereBetween('created_at', [
-            $selectedDate->toDateString(),
-            $selectedDate->copy()->endOfWeek()->toDateString()
-        ])->get();
+        // $reports = Report::whereBetween('created_at', [
+        //     $selectedDate->toDateString(),
+        //     $selectedDate->copy()->endOfWeek()->toDateString()
+        // ])->get();
     
-        return view('reports.index', compact('reports', 'selectedWeek'));
+        // return view('reports.index', compact('reports', 'selectedWeek'));
+
+        $reports = Report::all();
+    
+    return view('reports.index', compact('reports'));
     }
     
 
@@ -39,11 +43,13 @@ class ReportController extends Controller
     public function store(Request $request)
     {
         $data = $request->except('_token');
+        dd($data);
 
-        // Create a new timesheet record in the database
+        // Create and save the report
         Report::create($data);
 
-        return redirect()->route('reports.index')->with('success', 'Report created successfully.');
+        // Optionally, redirect back with a success message
+        return redirect()->back()->with('success', 'Report submitted successfully!');
     }
 
     /**

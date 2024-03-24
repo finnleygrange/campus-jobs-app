@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-white leading-tight">
-            {{ __('Jobs') }}
+            {{ __('Line Managers') }}
         </h2>
     </x-slot>
     <div class="py-12">
@@ -9,40 +9,25 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="py-6">
-                        <a href="{{ route('jobs.create') }}" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
-                            Create New Jobs
+                        <a href="{{ route('line-managers.create') }}" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
+                            Create New Line manager
                         </a>
                     </div>
                     <table class="w-full text-left table-auto min-w-max">
                         <tr>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
-                                    Job ID
+                                    Line Manager ID
                                 </p>
                             </th>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
-                                    Job Title 
+                                    Line Manager Name
                                 </p>
                             </th>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
-                                    Post Number
-                                </p>
-                            </th>
-                            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
-                                <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
-                                    Cost Code
-                                </p>
-                            </th>
-                            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
-                                <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
-                                    Pay Rate To October 23rd
-                                </p>
-                            </th>
-                            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
-                                <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
-                                    Pay Rate After October 23rd
+                                    Line Manager Email Address
                                 </p>
                             </th>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
@@ -51,49 +36,35 @@
                                 </p>
                             </th>
                         </tr>
-                        @foreach ($jobs as $job)
+                        @foreach ($line_managers as $line_manager)
                         <tr>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $job->id }}
+                                    {{ $line_manager->id}}
                                 </p>
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $job->job_title }}
+                                    {{ $line_manager->line_manager_name}}
                                 </p>
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $job->post_number }}
-                                </p>
-                            </td>
-                            <td class="p-4 border-b border-blue-gray-50">
-                                <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $job->cost_code }}
-                                </p>
-                            </td>
-                            <td class="p-4 border-b border-blue-gray-50">
-                                <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $job->pay_rate_to_oct_23 }}
-                                </p>
-                            </td>
-                            <td class="p-4 border-b border-blue-gray-50">
-                                <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
-                                    {{ $job->pay_rate_after_oct_23 }}
+                                    {{ $line_manager->line_manager_email }}
                                 </p>
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">
                                 <div class="flex">
-                                    <a href="{{ route('jobs.show', $job->id) }}" class="mr-2 text-blue-400 hover:text-blue-600 flex justify-items-center items-center">
+                                    <a href="{{ route('line-managers.show', $line_manager->id) }}" class="mr-2 text-blue-400 hover:text-blue-600 flex justify-items-center items-center">
                                         <span class="material-symbols-outlined">
                                             info
                                             </span></a>
-                                    <a href="{{ route('jobs.edit', $job->id) }}" class="mr-2 text-gray-600 hover:text-gray-800 flex justify-items-center items-center">
+                                    <a href="{{ route('line-managers.edit', $line_manager->id) }}" class="mr-2 text-gray-600 hover:text-gray-800 flex justify-items-center items-center">
                                         <span class="material-symbols-outlined">
                                             edit
-                                            </span></a>
-                                    <form id="deleteForm" action="{{ route('jobs.destroy', $job->id) }}" method="POST" class="inline">
+                                            </span>
+                                    </a>
+                                    <form id="deleteForm" action="{{ route('line-managers.destroy', $line_manager->id) }}" method="POST" class="inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="text-red-600 hover:text-red-800 flex justify-items-center items-center">
@@ -110,6 +81,7 @@
                                             }
                                         });
                                     </script>
+                                    
                                 </div>
                             </td>
                         </tr>

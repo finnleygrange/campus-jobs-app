@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('trackers', function (Blueprint $table) {
+        Schema::create('tracker', function (Blueprint $table) {
             $table->id();
-            $table->integer('student_id');
-            $table->string('student_name');
-            $table->string('student_email_address');
+            $table->foreignId('student_id')->constrained();
+            $table->foreignId('manager_id')->constrained();
+            $table->date('week_commencing');
             $table->date('visa_end_date');
-            $table->string('manager_name');
             $table->integer('worked_hours');
             $table->string('notes');
             $table->timestamps();

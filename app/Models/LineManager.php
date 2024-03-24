@@ -5,16 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Timesheet extends Model
+class LineManager extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'timesheet_id',
-        'student_id',
-        'job_id',
-        'worked_hours',
-        'week_commencing',
-        'line_manager',
+        'line_manager_id',
+        'line_manager_name',
+        'line_manager_email',
     ];
 }
