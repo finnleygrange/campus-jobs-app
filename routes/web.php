@@ -50,7 +50,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/jobs', JobController::class);
     Route::resource('/timesheets', TimesheetController::class);
     Route::resource('/reports', ReportController::class);
-    Route::resource('/trackers', TrackerController::class);
+    Route::resource('/tracker', TrackerController::class);
 });
 
 Route::middleware('auth')->group(function () {

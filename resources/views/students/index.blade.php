@@ -20,6 +20,11 @@
                         <tr>
                             <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
+                                    ID
+                                </p>
+                            </th>
+                            <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                                <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">
                                     Student Number
                                 </p>
                             </th>
@@ -54,6 +59,11 @@
                             <td class="p-4 border-b border-blue-gray-50">
                                 <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
                                     {{ $student->id}}
+                                </p>
+                            </td>
+                            <td class="p-4 border-b border-blue-gray-50">
+                                <p class="block font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+                                    {{ $student->student_number}}
                                 </p>
                             </td>
                             <td class="p-4 border-b border-blue-gray-50">

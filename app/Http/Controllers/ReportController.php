@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Job;
+use App\Models\LineManager;
 use App\Models\report;
+use App\Models\Student;
 use App\Models\Tracker;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -14,7 +17,10 @@ class ReportController extends Controller
      */
     public function create()
     {
-        return view('reports.create');
+        $students = Student::all();
+        $jobs = Job::all();
+        $lineManagers = LineManager::all();
+        return view('reports.create', compact('students', 'jobs', 'lineManagers'));
     }
 
     /**
@@ -115,6 +121,8 @@ class ReportController extends Controller
         'report_id' => $report->id,
         // Add other necessary fields from the report
     ]);
+
+    
 
     return redirect()->back()->with('success', 'Report approved successfully.');
 }

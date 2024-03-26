@@ -10,7 +10,7 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="mb-4">
-                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Job ID: {{ $job->id }}</p>
+                        <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">ID: {{ $job->id }}</p>
                     </div>
                     <div class="mb-4">
                         <p class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70">Job Title: {{ $job->job_title }}</p>

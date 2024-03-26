@@ -27,7 +27,7 @@
                             <form action="{{ route('reports.index') }}" method="GET" class="flex items-center">
                                 @csrf
                                 <label for="status" class="mr-2">Filter by Status:</label>
-                                <select name="status" id="status" class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md py-2 px-4 mx-2">
+                                <select name="status" id="status" class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md py-2 px-4 mx-2 w-1/6">
                                     <option value="all" {{ request('status') == 'all' ? 'selected' : '' }}>All</option>
                                     <option value="pending" {{ request('status') == 'pending' ? 'selected' : '' }}>Pending</option>
                                     <option value="approved" {{ request('status') == 'approved' ? 'selected' : '' }}>Approved</option>

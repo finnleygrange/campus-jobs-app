@@ -14,7 +14,7 @@
                         @method('PUT')
                         <div class="mb-4">
                             <label for="student_number" class="block font-sans text-sm antialiased font-normal leading-none">Student Number</label>
-                            <input type="text" name="student_number" id="student_number" value="{{ $student->id }}" class="mt-1 p-2 border rounded-md w-full" placeholder="Student number" required>
+                            <input type="text" name="student_number" id="student_number" value="{{ $student->student_number }}" class="mt-1 p-2 border rounded-md w-full" placeholder="Student number" required>
                         </div>
                         <div class="mb-4">
                             <label for="student_first_name" class="block font-sans text-sm antialiased font-normal leading-none">Student First Name</label>
