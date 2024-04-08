@@ -10,13 +10,13 @@
         
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="relative flex flex-col w-full h-full overflow-scroll shadow-md rounded-xl bg-clip-border text-gray-900 dark:text-gray-100 p-6">
-                <form action="{{ route('timesheets.index') }}" method="POST" enctype="multipart/form-data">
+                {{-- <form action="{{ route('timesheets.index') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                       <input type="file" name="excel_file">
                        <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
                        Import Timesheet
                        </button>
-                 </form>
+                 </form> --}}
             <form action="{{ route('timesheets.create') }}" method="GET">
                             @csrf
                             <button type="submit" class="bg-custom2 text-white font-bold py-2 px-4 my-2 rounded">
