@@ -30,10 +30,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->except('_token');
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:6|confirmed',
+            'role' => 'required|in:user,admin', // Ensure role is either 'user' or 'admin'
+        ]);
 
         // Create a new user record in the database
-        User::create($data);
+        $user = new User();
+        $user->name = $validatedData['name'];
+        $user->email = $validatedData['email'];
+        $user->password = Hash::make($validatedData['password']);
+        $user->role = $validatedData['role'];
+        $user->save();
 
         return redirect()->route('users.index')->with('success', 'User created successfully.');
     }
