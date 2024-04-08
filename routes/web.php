@@ -10,6 +10,7 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TimesheetController;
 use App\Http\Controllers\TrackerController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -44,6 +45,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::resource('/users', UserController::class);
     Route::resource('/students', StudentController::class);
     Route::resource('/managers', ManagerController::class);
     Route::resource('/line-managers', LineManagerController::class);
