@@ -1,66 +1,92 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Campus Jobs Automation System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+The Campus Jobs Automation System is a web-based application designed to improve the process of tracking and approving student work hours. The system aims to automate the approval process while also ensuring compliance with visa regulations for international students.
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Table of Contents
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. [Introduction](#campus-jobs-automation-system)
+2. [Prerequisites](#prerequisites)
+3. [Getting Started](#getting-started)
+6. [Credits](#credits)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Prerequisites
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Before you begin, ensure you have the following prerequisites installed on your system:
 
-## Laravel Sponsors
+**1. Docker Desktop:**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Download and install Docker Desktop from the [official website](https://www.docker.com/products/docker-desktop/).
 
-### Premium Partners
+- Make sure the Hyper-V feature is enabled in your system's Windows features for optimal performance.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+**2. PHP:**
 
-## Contributing
+- Download the PHP installer from the [official PHP website](https://windows.php.net/download#php-8.3).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Select the appropriate PHP version and architecture for your operating system. Ensure to download the thread-safe version if applicable.
 
-## Code of Conduct
+- Make sure to add PHP to your system's PATH environment variable during the installation process.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**3. Composer:**
 
-## Security Vulnerabilities
+- Download `composer-setup.exe` from [here](https://getcomposer.org/download/).
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Follow the installation instructions provided on the Composer website.
 
-## License
+**4. Node.js:**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Download Node.js from [here](https://nodejs.org/en/download/current).
+
+- Follow the installation instructions provided for your operating system.
+
+**5. Windows Subsystem for Linux (WSL):**
+
+- If you're using Windows, ensure that Windows Subsystem for Linux (WSL) is installed and configured on your system. You can follow the instructions provided [here](https://docs.microsoft.com/en-us/windows/wsl/install).
+
+## Getting Started
+
+**1. Clone Project Repository**:
+
+- Clone the project repositories `git clone https://github.com/finnleygrange/campus-jobs-app.git`.
+
+**2. Open Project in VSCode**:
+
+- Navigate to the `campus-jobs-app` directory using VSCode.
+- Open a new terminal within VSCode.
+
+**3. Install Dependencies**:
+- In the terminal, execute the following commands:
+  
+  ```bash
+  composer install
+  npm install
+  ```
+
+**4. Start WSL**:
+- Launch WSL by running the following command in the terminal:
+     
+     ```bash
+     wsl
+     ```
+
+**5. Run Project in Docker**:
+   - Execute the following command in the terminal:
+     
+     ```bash
+     ./vendor/bin/sail up
+     ```
+
+**6. View Project**:
+   - Open your web browser and navigate to `localhost` to view the project.
+
+## Credits
+
+[Finnley Grange](https://github.com/finnleygrange) <br />
+[Daiana A. Patachia-Popa](https://github.com/DaianaPopa) <br />
+[Perkins Phoebe](https://github.com/phoebiep) <br />
+Purandare Udayan <br />
+Harvey Spencer <br />
