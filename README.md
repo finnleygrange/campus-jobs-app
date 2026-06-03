@@ -7,14 +7,11 @@ The Campus Jobs Automation System is a web-based application designed to improve
 <details>
 <summary>🎬 Click to view project video walkthroughs</summary>
 
-#### Video 1: Feature Overview
-<video src="2024-04-07_22-58-20.mp4" width="100%" controls></video>
+[![Watch the video](Screenshot_20260603_153840.png)](https://youtu.be/cESwdYEvXTc])
 
-#### Video 2: App Workflow
-<video src="2024-04-08_07-24-24.mp4" width="100%" controls></video>
+[![Watch the video](Screenshot_20260603_153953.png)]([https://youtu.be/_odkLAmyg8A])
 
-#### Video 3: Final Demo
-<video src="2024-04-08_08-00-50.mp4" width="100%" controls></video>
+[![Watch the video](Screenshot_20260603_154034.png)]([https://youtu.be/nvYJKbYrbe8])
 
 </details>
 
