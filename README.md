@@ -2,6 +2,21 @@
 
 The Campus Jobs Automation System is a web-based application designed to improve the process of tracking and approving student work hours. The system aims to automate the approval process while also ensuring compliance with visa regulations for international students.
 
+### 📱 Campus Jobs App Demonstrations
+
+<details>
+<summary>🎬 Click to view project video walkthroughs</summary>
+
+#### Video 1: Feature Overview
+<video src="2024-04-07_22-58-20.mp4" width="100%" controls></video>
+
+#### Video 2: App Workflow
+<video src="2024-04-08_07-24-24.mp4" width="100%" controls></video>
+
+#### Video 3: Final Demo
+<video src="2024-04-08_08-00-50.mp4" width="100%" controls></video>
+
+</details>
 
 ## Table of Contents
 
@@ -9,9 +24,6 @@ The Campus Jobs Automation System is a web-based application designed to improve
 2. [Prerequisites](#prerequisites)
 3. [Getting Started](#getting-started)
 6. [Credits](#credits)
-
-
-
 
 ## Prerequisites
 
